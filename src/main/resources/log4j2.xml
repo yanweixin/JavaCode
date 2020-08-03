@@ -50,7 +50,8 @@
         </Async>
         <NoSql name="MongoAppender">
             <ThresholdFilter level="INFO"/>
-            <MongoDb3 databaseName="logdb" collectionName="appLog" server="192.168.4.130"/>
+            <MongoDb3 databaseName="logdb" collectionName="applicationLog" server="dev-server"
+                      username="logs" password="logs"/>
         </NoSql>
 <!--        <Cassandra name="Cassandra" clusterName="Test Cluster" keyspace="test" table="logs" bufferSize="10"-->
 <!--                   batched="true">-->

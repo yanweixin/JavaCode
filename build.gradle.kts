@@ -20,6 +20,7 @@ java {
 }
 
 val log4j2Version by extra("2.13.3")
+val junitVersion by extra("5.6.2")
 
 allprojects {
     repositories {
@@ -48,10 +49,7 @@ dependencies {
     runtimeOnly("org.mongodb:mongo-java-driver:3.12.5")
 
     // Use JUnit Jupiter API for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
-
-    // Use JUnit Jupiter Engine for testing.
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
 }
 
 application {
@@ -62,6 +60,7 @@ application {
 val test by tasks.getting(Test::class) {
     // Use junit platform for unit tests
     useJUnitPlatform()
+    testLogging.showStandardStreams = true
 }
 
 tasks.wrapper {

@@ -6,17 +6,24 @@ package code;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.WeakHashMap;
+
 public class App {
     private static final Logger logger = LoggerFactory.getLogger(App.class);
 
     public String str = "Hello";
 
     public String getGreeting(String s) {
-        logger.info(s);
         return "Hello";
     }
 
     public static void main(String[] args) {
-        logger.info("Logger");
+        logger.info("123");
+
     }
+
 }

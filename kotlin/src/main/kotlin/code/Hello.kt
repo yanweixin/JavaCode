@@ -11,7 +11,3 @@ class Hello {
     val items = listOf<String>("apple", "banana", "application", "alpha")
 
 }
-
-//fun main(args: Array<String>) {
-//    println(App().greeting)
-//}
